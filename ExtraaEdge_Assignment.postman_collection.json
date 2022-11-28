@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "5efd9ce9-bf61-4a92-a10f-f5c67c77c08e",
+		"name": "ExtraaEdge_Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sales Requests",
+			"item": [
+				{
+					"name": "Get Sales Record by Date Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44330/api/sales/SalesRecord?fromDate=01%20nov%202022&toDate=30%20nov%202022",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44330",
+							"path": [
+								"api",
+								"sales",
+								"SalesRecord"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "01%20nov%202022"
+								},
+								{
+									"key": "toDate",
+									"value": "30%20nov%202022"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Sales Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"saleId\": 0,\r\n  \"productId\": 11,\r\n  \"productName\": \"m52\",\r\n  \"saleDate\": \"29 11 2022\",\r\n  \"saleTime\": \"11:35\",\r\n  \"customerName\": \"cheri\",\r\n  \"customerContact\": \"\",\r\n  \"sellingPrice\": 32000,\r\n  \"discount\": 0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44330/api/sales",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44330",
+							"path": [
+								"api",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Monthly Sales Report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44330/api/sales/MonthlySalesReport?month=11&year=2022",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44330",
+							"path": [
+								"api",
+								"sales",
+								"MonthlySalesReport"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "11"
+								},
+								{
+									"key": "year",
+									"value": "2022"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Monthly Sales Report By Product Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44330/api/sales/MonthlySalesReportByProduct?month=11&year=2022&productId=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44330",
+							"path": [
+								"api",
+								"sales",
+								"MonthlySalesReportByProduct"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "11"
+								},
+								{
+									"key": "year",
+									"value": "2022"
+								},
+								{
+									"key": "productId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get list of all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44330/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product to list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 0,\r\n  \"name\": \"galaxy m52\",\r\n  \"price\": 21000,\r\n  \"description\": \"\",\r\n  \"categoryName\": \"m52\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44330/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 10,\r\n  \"name\": \"m52\",\r\n  \"price\": 21000,\r\n  \"description\": \"m52\",\r\n  \"categoryName\": \"m52\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44330/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44330/api/products/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44330/api/products/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Add/Update products to Database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n  \"productId\": 11,\r\n  \"name\": \"m52\",\r\n  \"price\": 21000,\r\n  \"description\": \"m52\",\r\n  \"categoryName\": \"m52\"\r\n  },\r\n  {\r\n  \"productId\": 9,\r\n  \"name\": \"m32\",\r\n  \"price\": 19000,\r\n  \"description\": \"m32\",\r\n  \"categoryName\": \"\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44330/api/products/PostBulk",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44330",
+					"path": [
+						"api",
+						"products",
+						"PostBulk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
